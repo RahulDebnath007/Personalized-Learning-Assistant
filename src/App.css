@@ -1,0 +1,252 @@
+/* App.css */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh; /* Ensure the body stretches full height */
+  overflow: auto; /* Allow scrolling if content exceeds viewport */
+}
+
+.App {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin: 20px;
+  overflow: auto; /* Allow scrolling within the container */
+  transition: transform 0.3s ease;
+}
+
+.App:hover {
+  transform: scale(1.05);
+}
+
+.app-title {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #000; /* Changed title color to black */
+  margin-bottom: 30px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.checkbox-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox-input {
+  margin: 0;
+}
+
+.checkbox-label {
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.checkbox-label:hover {
+  color: #2575fc;
+}
+
+.input-field {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.input-field:focus {
+  border-color: #2575fc;
+  outline: none;
+  box-shadow: 0 0 8px rgba(37, 117, 252, 0.5);
+}
+
+.submit-button {
+  padding: 14px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #2575fc;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #6a11cb;
+  transform: scale(1.05);
+}
+
+.error {
+  color: #ff4d4d;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.recommendations {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.recommendations-title {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.recommendation-item {
+  font-size: 1.1rem;
+  color: #555;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.3s ease;
+}
+
+.recommendation-item:last-child {
+  border-bottom: none;
+}
+
+.recommendation-item:hover {
+  background-color: #f1f1f1;
+}
+
+.recommendations::-webkit-scrollbar {
+  width: 8px;
+}
+
+.recommendations::-webkit-scrollbar-thumb {
+  background-color: #2575fc;
+  border-radius: 10px;
+}
+
+.recommendations::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+
+/* Media Queries for Mobile and Tablet */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .App {
+    padding: 30px;
+    max-width: 100%;
+    margin: 10px;
+  }
+
+  .app-title {
+    font-size: 2rem;
+  }
+
+  .form-label,
+  .checkbox-label {
+    font-size: 1.1rem;
+  }
+
+  .input-field {
+    font-size: 1rem;
+  }
+
+  .submit-button {
+    font-size: 1.1rem;
+    padding: 12px;
+  }
+
+  .recommendations-title {
+    font-size: 1.5rem;
+  }
+
+  .recommendation-item {
+    font-size: 1rem;
+  }
+
+  .checkbox-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .checkbox-group {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+    overflow: auto;
+  }
+
+  .App {
+    padding: 20px;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .app-title {
+    font-size: 1.8rem;
+  }
+
+  .form-label {
+    font-size: 1rem;
+  }
+
+  .input-field {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .submit-button {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .recommendations-title {
+    font-size: 1.4rem;
+  }
+
+  .recommendation-item {
+    font-size: 1rem;
+  }
+
+  .recommendations {
+    max-height: 250px;
+    overflow-y: auto;
+  }
+}
